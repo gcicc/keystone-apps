@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keystone — Apps to help you flourish</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500&display=swap');
+:root{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2333;--sand:#c4a882;--sand-dim:rgba(196,168,130,0.3);--text:#e6ddd0;--text-dim:#7d7567;--lavender:#9b8ec4;--sky:#6ba3be;--sage:#7c9a72;--rose:#c47d7d;--gold:#d4a843;--steel:#7a8fa6;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+a{color:var(--sand);text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+/* HERO */
+.hero{text-align:center;padding:80px 20px 60px;position:relative;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(196,168,130,0.06) 0%,transparent 60%);pointer-events:none;}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:300;letter-spacing:8px;color:var(--sand);text-transform:uppercase;margin-bottom:8px;}
+.hero .tagline{font-size:16px;color:var(--text-dim);letter-spacing:3px;font-style:italic;margin-bottom:30px;}
+.hero .count{font-size:13px;color:var(--text-dim);letter-spacing:1px;}
+.hero .count span{color:var(--sand);font-weight:500;}
+
+/* PILLARS */
+.pillars{display:flex;justify-content:center;gap:30px;padding:0 20px 40px;flex-wrap:wrap;}
+.pillar{text-align:center;min-width:100px;}
+.pillar-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;letter-spacing:2px;color:var(--sand);margin-bottom:2px;}
+.pillar-desc{font-size:10px;color:var(--text-dim);letter-spacing:1px;text-transform:uppercase;}
+
+/* SECTIONS */
+.section{padding:40px 20px;max-width:900px;margin:0 auto;}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;letter-spacing:3px;color:var(--sand);text-transform:uppercase;text-align:center;margin-bottom:6px;}
+.section-sub{font-size:11px;color:var(--text-dim);text-align:center;margin-bottom:24px;font-style:italic;}
+.divider{width:40px;height:1px;background:var(--sand-dim);margin:0 auto 24px;}
+
+/* APP GRID */
+.app-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;}
+.app-card{background:var(--bg2);border:1px solid rgba(196,168,130,0.06);border-radius:12px;padding:16px;text-align:center;transition:all 0.3s;cursor:pointer;text-decoration:none;color:var(--text);display:block;}
+.app-card:hover{border-color:var(--sand-dim);transform:translateY(-2px);text-decoration:none;}
+.app-card .app-icon{font-size:28px;margin-bottom:6px;display:block;}
+.app-card .app-name{font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:var(--sand);margin-bottom:3px;}
+.app-card .app-desc{font-size:10px;color:var(--text-dim);line-height:1.4;}
+.app-card .app-tag{display:inline-block;margin-top:6px;font-size:8px;padding:2px 8px;border-radius:8px;letter-spacing:0.5px;text-transform:uppercase;}
+.tag-live{background:rgba(76,175,80,0.1);color:#7c9a72;border:1px solid rgba(76,175,80,0.2);}
+.tag-soon{background:rgba(196,168,130,0.08);color:var(--text-dim);border:1px solid rgba(196,168,130,0.1);}
+
+/* FOOTER */
+.footer{text-align:center;padding:40px 20px 60px;border-top:1px solid rgba(196,168,130,0.06);}
+.footer .brand{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;letter-spacing:4px;color:var(--sand);text-transform:uppercase;margin-bottom:4px;}
+.footer .copy{font-size:10px;color:var(--text-dim);}
+.footer .values{font-size:10px;color:var(--text-dim);margin-top:8px;letter-spacing:1px;}
+
+@media(max-width:500px){
+  .hero h1{font-size:32px;letter-spacing:5px;}
+  .pillars{gap:16px;}
+  .app-grid{grid-template-columns:repeat(2,1fr);gap:8px;}
+  .app-card{padding:12px;}
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>Keystone</h1>
+  <div class="tagline">Apps to help you flourish.</div>
+  <div class="count"><span>11</span> apps live &middot; <span>0</span> subscriptions &middot; <span>100%</span> free to try</div>
+</div>
+
+<div class="pillars">
+  <div class="pillar"><div class="pillar-name">Breathe</div><div class="pillar-desc">Wellness & Meditation</div></div>
+  <div class="pillar"><div class="pillar-name">Think</div><div class="pillar-desc">Brain & Philosophy</div></div>
+  <div class="pillar"><div class="pillar-name">Create</div><div class="pillar-desc">Art & Expression</div></div>
+  <div class="pillar"><div class="pillar-name">Play</div><div class="pillar-desc">Physics & Satisfaction</div></div>
+  <div class="pillar"><div class="pillar-name">Grow</div><div class="pillar-desc">Learning & Tools</div></div>
+</div>
+
+<!-- BREATHE -->
+<div class="section">
+  <div class="section-title">Breathe</div>
+  <div class="section-sub">Wellness, meditation, yoga, art therapy</div>
+  <div class="divider"></div>
+  <div class="app-grid">
+    <a class="app-card" href="https://gcicc.github.io/prana-breathing/" target="_blank">
+      <span class="app-icon">&#x1F32C;</span>
+      <div class="app-name">Prana Breathing</div>
+      <div class="app-desc">20+ breathing patterns from 7 traditions. Yoga, Zen, Qigong, Tactical, Wellness.</div>
+      <span class="app-tag tag-live">Live</span>
+    </a>
+    <a class="app-card" href="https://gcicc.github.io/prana-sound/" target="_blank">
+      <span class="app-icon">&#x1F3B6;</span>
+      <div class="app-name">Prana Sound</div>
+      <div class="app-desc">Solfeggio, binaural beats, chakra tones, singing bowls, nature sounds, sleep timer.</div>
+      <span class="app-tag tag-live">Live</span>
+    </a>
+    <a class="app-card" href="https://gcicc.github.io/prana-drishti/" target="_blank">
+      <span class="app-icon">&#x1F441;</span>
+      <div class="app-name">Prana Drishti</div>
+      <div class="app-desc">Visual meditation. Trataka, mandala, yantra, chakra colors, aurora, starfield.</div>
+      <span class="app-tag tag-live">Live</span>
+    </a>
+    <a class="app-card" href="https://gcicc.github.io/prana-sparsha/" target="_blank">
+      <span class="app-icon">&#x270B;</span>
+      <div class="app-name">Prana Sparsha</div>
+      <div class="app-desc">Touch & art therapy. Mandala, enso, sand garden, kinetic sand table, bilateral drawing.</div>
+      <span class="app-tag tag-live">Live</span>
+    </a>
+  </div>
+</div>
+
+<!-- PLAY -->
+<div class="section">
+  <div class="section-title">Play</div>
+  <div class="section-sub">Physics simulations, eye candy, oddly satisfying</div>
+  <div class="divider"></div>
+  <div class="app-grid">
+    <a class="app-card" href="https://gcicc.github.io/marble-kinetic/" target="_blank">
+      <span class="app-icon">&#x26AB;</span>
+      <div class="app-name">Kinetic</div>
+      <div class="app-desc">Marble machine physics. Watch, build, and solve kinetic puzzles.</div>
+      <span class="app-tag tag-live">Live</span>
+    </a>
+    <a class="app-card" href="https://gcicc.github.io/pendulum-waves/" target="_blank">
+      <span class="app-icon">&#x1F4AB;</span>
+      <div class="app-name">Pendulum Waves</div>
+      <div class="app-desc">Mesmerizing phase patterns. 6 color palettes, trails, adjustable count and speed.</div>
+      <span class="app-tag tag-live">Live</span>
+    </a>
+    <a class="app-card" href="https://gcicc.github.io/lightning-gen/" target="_blank">
+      <span class="app-icon">&#x26A1;</span>
+      <div class="app-name">Lightning</div>
+      <div class="app-desc">Fractal lightning generator. Tap to strike. Thunder audio, auto mode, 6 colors.</div>
+      <span class="app-tag tag-live">Live</span>
+    </a>
+    <a class="app-card" href="https://gcicc.github.io/harmonograph/" target="_blank">
+      <span class="app-icon">&#x27B0;</span>
+      <div class="app-name">Harmonograph</div>
+      <div class="app-desc">Pendulum-driven mathematical art. Lissajous curves, roses, knots, butterflies.</div>
+      <span class="app-tag tag-live">Live</span>
+    </a>
+    <a class="app-card" href="https://gcicc.github.io/bubble-wrap/" target="_blank">
+      <span class="app-icon">&#x25EF;</span>
+      <div class="app-name">Bubble Wrap</div>
+      <div class="app-desc">Pop bubbles. Drag to pop many. 4 styles including hearts. Satisfying pop sounds.</div>
+      <span class="app-tag tag-live">Live</span>
+    </a>
+  </div>
+</div>
+
+<!-- CREATE -->
+<div class="section">
+  <div class="section-title">Create</div>
+  <div class="section-sub">Art, drawing, expression</div>
+  <div class="divider"></div>
+  <div class="app-grid">
+    <a class="app-card" href="https://gcicc.github.io/kaleidoscope-draw/" target="_blank">
+      <span class="app-icon">&#x2742;</span>
+      <div class="app-name">Kaleidoscope</div>
+      <div class="app-desc">Draw with radial symmetry. Every stroke reflected into mesmerizing patterns.</div>
+      <span class="app-tag tag-live">Live</span>
+    </a>
+  </div>
+</div>
+
+<!-- THINK -->
+<div class="section">
+  <div class="section-title">Think</div>
+  <div class="section-sub">Brain training, reaction time, cognitive assessment</div>
+  <div class="divider"></div>
+  <div class="app-grid">
+    <a class="app-card" href="https://gcicc.github.io/reflex-age/" target="_blank">
+      <span class="app-icon">&#x1F9E0;</span>
+      <div class="app-name">Reflex Age</div>
+      <div class="app-desc">How fast is your brain? Reaction time tests, brain age calculator, 3 modes.</div>
+      <span class="app-tag tag-live">Live</span>
+    </a>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="brand">Keystone</div>
+  <div class="values">No subscriptions &middot; No ads &middot; No tracking &middot; Fair prices</div>
+  <div class="copy">&copy; 2026 Keystone Apps. All apps available as Progressive Web Apps — try free in your browser.</div>
+</div>
+
+</body>
+</html>
